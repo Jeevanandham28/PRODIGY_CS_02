@@ -15,7 +15,6 @@ def encrypt_decrypt_image(image_path, key):
     key = np.uint8(key)
 
     # Apply XOR operation to each pixel
-    #encrypted_image = cv2.bitwise_xor(image, key)
     encrypted_image = cv2.bitwise_xor(image, np.full_like(image, key, dtype=np.uint8))
 
 
